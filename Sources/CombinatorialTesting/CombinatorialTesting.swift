@@ -1,7 +1,6 @@
 import DDKit
 
 /// typealias ScheduleSet = MFDD<ScheduleKey, ScheduleValue>
-typealias CITestSet = MFDD<ParameterKey, ParameterValue>
 
 /// A MFDD key representing a parameter variable
 ///
@@ -11,7 +10,7 @@ struct ParameterKey: Hashable {
 
   fileprivate let value: Int64
     
-    var paramID : Int { Int(value) }
+  var paramID : Int { Int(value) }
 
   static func param(id: Int) -> ParameterKey {
     return ParameterKey(value: Int64(id))
@@ -40,10 +39,10 @@ struct ParameterValue: Hashable {
 
   private let value: Int64
 
-  var parameterID: Int { Int(value) }
+  var valueID: Int { Int(value) }
 
-  init(parameterID: Int) {
-    value = Int64(parameterID)
+  init(valueID: Int) {
+    value = Int64(valueID)
   }
 
 }
@@ -51,7 +50,7 @@ struct ParameterValue: Hashable {
 extension ParameterValue: CustomStringConvertible {
 
   var description: String {
-    return "(parID: \(parameterID)"
+    return "(parID: \(valueID)"
   }
 
 }

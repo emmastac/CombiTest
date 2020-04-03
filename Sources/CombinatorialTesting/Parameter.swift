@@ -5,9 +5,9 @@ class Parameter {
     
     let name : String
     
-    let values : Set<String>
+    let values : [ValueOption]
     
-    init(id : Int, name: String, values: Set<String> = []) {
+    init(id : Int, name: String, values: [ValueOption] = []) {
       self.id = id
       self.name = name
       self.values = values

@@ -13,14 +13,14 @@ class ValueOption {
     }
 }
 
-extension Parameter: Hashable {
-
-  func hash(into hasher: inout Hasher) {
-    hasher.combine(name)
-  }
-
-  static func == (lhs: Parameter, rhs: Parameter) -> Bool {
-    return lhs === rhs
-  }
-
-}
+//extension Parameter: Hashable {
+//
+//  func hash(into hasher: inout Hasher) {
+//    hasher.combine(name)
+//  }
+//
+//  static func == (lhs: Parameter, rhs: Parameter) -> Bool {
+//    return lhs === rhs
+//  }
+//
+//}
